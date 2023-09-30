@@ -95,11 +95,37 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: height .2s ease;
+}
+
+.wrapper.active {
+    height: 600px;
 }
 
 .wrapper .form-box {
     width: 100%;
     padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-500px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(500px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
 }
 
 .wrapper .icon-close {
