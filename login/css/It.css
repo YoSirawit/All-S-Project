@@ -1,0 +1,27 @@
+/* Login */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 5rem;
+    background-color:#FFFFE8;
+}
+
+.form-login {
+    max-width: 25rem;
+    margin: auto;
+}
+
+.it-logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.form-login {
+    margin-top: 7rem;
+}
+
+/* Register */
+
