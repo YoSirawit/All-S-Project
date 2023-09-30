@@ -5,23 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/Login.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-
-    <header>
-        <h2 class="logo">IT resturant</h2>
-        <nav class="navigation">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <button class="btnLogin-popup">Login</button>
-        </nav>
-    </header>
-
+    {% extends "header.html" %}
+    {% block header %}
     <div class="wrapper">
         <span class="icon-close">
             <i class='bx bx-x'></i>
@@ -101,6 +90,6 @@
     </div>
     <script src="/javascript/script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
+    {% endblock %}
 </body>
 </html>

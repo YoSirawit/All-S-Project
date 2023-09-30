@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/image/1316292.jpeg);
+    background: url(../1316292.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -225,7 +225,7 @@ header {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 600px)
-{
-    
+.navigation {
+    display: flex;
+    align-items: center;
 }
