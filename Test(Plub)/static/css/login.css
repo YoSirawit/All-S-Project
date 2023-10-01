@@ -96,6 +96,7 @@ header {
     align-items: center;
     overflow: hidden;
     transition: height .2s ease;
+    margin-top: 5rem;
 }
 
 .wrapper.active {
@@ -254,4 +255,30 @@ header {
 .navigation {
     display: flex;
     align-items: center;
+}
+
+/* responsive */
+@media screen and (max-width: 900px){
+    header {
+        text-align: center;
+        display: block;
+    }
+    .navigation a, .navigation , form.navigation {
+        display: block;
+        margin: 1rem;
+    }
+    h2.logo {
+        text-align: left;
+        display: block;
+    }
+    .navigation .btnLogin-popup {
+        text-align: center;
+        display: block;
+        margin-left: 0px;
+    
+    }
+    form.navigation{
+        width: 130px;
+        margin: 0 auto;
+    }
 }
