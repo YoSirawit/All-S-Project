@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
+    <header class="sticky">
         <div class="navbar">
             <div class="logo"><a href="#">IT restaurant</a></div>
             <ul class="links">
@@ -48,6 +48,27 @@
                 : 'fa-solid fa-bars'
             }
         </script>
+        <!-- ให้ header อยู่บน layer บนสุด -->
+        <script>
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
+
+            // Get the header
+            var header = document.getElementById("header");
+
+            // Get the offset position of the navbar
+            var sticky = header.offsetTop;
+
+            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+            }
+        </script>
+
         </nav>
     </header>
     {% block header %}
