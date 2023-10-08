@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine, text
 from flask_mysqldb import MySQL
 
-db_connection_string = "mysql+pymysql://2v71n11d5258z7xmb138:pscale_pw_yUeNiTZTrvyiWx6hJDz10nMscbLh2Zs4p7Jq4UZDcpn@aws.connect.psdb.cloud/itrestaurant?charset=utf8mb4"
+db_connection_string = "ใส่ตรงนี้คับ"
 
 engine = create_engine(
     db_connection_string, 
@@ -21,6 +21,6 @@ def load_userid_from_db():
 
 def shopname():
     with engine.connect() as conn:
-        shopnames = list(conn.execute(text("select shopname from shoplist")))
+        shopnames = conn.execute(text("select shopname from shoplist"))
 
-    return shopnames
+    return shopnames.all()
