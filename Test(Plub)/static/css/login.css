@@ -11,273 +11,248 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background: url(../1316292.jpeg);
     background-size: cover;
     background-position: center;
 }
 
-header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
+li {
+    list-style: none;
 }
 
-.logo {
-    font-size: 2em;
-    color: #fff;
-    user-select: none;
-}
-
-.navigation a {
-    position: relative;
-    font-size: 1.1rem;
-    color: #fff;
+a {
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    margin: 10px 20px;
 }
 
-.navigation a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
+a:hover {
+    color: coral;
+}
+
+/* Header */
+
+header.sticky {
+    position: fixed;
     width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.navigation a:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-.navigation .btnLogin-popup {
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: #fff;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
-}
-
-.navigation .btnLogin-popup:hover {
-    background: #fff;
-    color: #162938;
-}
-
-.wrapper {
-    position: relative;
-    width: 500px;
-    height: 540px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.746);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: height .2s ease;
-    margin-top: 5rem;
-}
-
-.wrapper.active {
-    height: 600px;
-}
-
-.wrapper .form-box {
-    width: 100%;
-    padding: 40px;
-}
-
-.wrapper .form-box.login {
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-
-.wrapper.active .form-box.login {
-    transition: none;
-    transform: translateX(-500px);
-}
-
-.wrapper .form-box.register {
-    position: absolute;
-    transition: none;
-    transform: translateX(500px);
-}
-
-.wrapper.active .form-box.register {
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-
-.wrapper .icon-close {
-    position: absolute;
     top: 0;
     right: 0;
-    width: 40px;
-    height: 40px;
-    background: #162938;
-    font-size: 2em;
-    color: #fff;
+    z-index: 1000;
     display: flex;
-    justify-content: center;
+    padding: 0 2rem;
+    justify-content: space-between;
     align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
-
+    background: black;
+    padding: 30px 14%;
+    transition: all .50s ease;
 }
 
-.form-box h2 {
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
-}
-
-.input-box {
-    position: relative;
+.navbar{
     width: 100%;
-    height: 50px;
-    border-bottom: 2.2px solid #162938;
-    margin: 30px 0;
-}
-
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.input-box input:focus~label,
-.input-box input:valid~label {
-    top: -5px;
-}
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #162938;
-    font-weight: 500;
-    padding: 0 35px 0 5px;
-}
-
-.input-box .icon {
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: #fff;
-    line-height: 57px;
-}
-
-.remember-forgot {
-    font-size: .9em;
-    color: #fff;
-    font-weight: 500;
-    margin: -15px 0 15px;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 3px;
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-.remember-forgot a {
-    color:#fff;
-    text-decoration: none;
+.navbar .links {
+    display: flex;
+    gap: 2rem;
 }
 
-.remember-forgot a:hover {
-    text-decoration: underline;
+.navbar .toggle_btn {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
 }
 
-.btn {
-    width: 100%;
-    height: 45px;
-    background: #162938;
+.action_btn{
+    background-color: rgb(255, 148, 72);
+    color: rgb(255, 255, 255);
+    padding: 1rem 1rem;
     border: none;
     outline: none;
-    border-radius: 6px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    color: #fff;
-    font-size: 1em;
-    font-weight: 500;
+    transition: scale 0.2 ease;
 }
 
-.login-register {
-    font-size: .9em;
-    color: #fff;
-    text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
+.action_btn:hover {
+    scale: 1.05;
+    color: #ffffff;
 }
 
-.login-register p a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+.action_btn:active {
+    scale: 0.95;
 }
 
-.login-register p a:hover {
-    text-decoration: underline;
+/* dropdown-menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 77px;
+    height: 0;
+    width: 300px;
+    background: transparent;
+    backdrop-filter: blur(35px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.navigation {
+.dropdown_menu.open {
+    height: 345px;
+}
+
+.dropdown_menu li {
+    padding: 0.9rem;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-/* responsive */
-@media screen and (max-width: 900px){
-    header {
-        text-align: center;
-        display: block;
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* end header */
+
+/* home */
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    place-items: center;
+    margin-top: 8rem;
+}
+
+.row {
+    position: relative;
+    padding: 30px 55px 35px;
+    background: rgb(34, 34, 34);
+    border-radius: 1rem;
+    margin: auto;
+    text-align: center;
+    box-shadow: -1px 0 5px 1px rgb(62, 62, 62);
+}
+
+.row h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 0.3rem;
+    background: rgb(0, 0, 0);
+    padding: 3px 10px;
+    transition: all .20s ease;
+}
+
+.button:hover, button:hover {
+    background: coral;
+    color: black;
+    box-shadow: -1px 0 5px 1px rgb(255, 138, 96);
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: coral;
+}
+
+/* end home */
+
+/* Responsive */
+@media (max-width: 800px) {
+
+    .shop-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        /* margin-top: 5rem; */
     }
-    .navigation a, .navigation , form.navigation {
-        display: block;
-        margin: 1rem;
+
+    .row {
+        padding: 20px 45px 20px;
     }
-    h2.logo {
-        display: block;
+
+    .navbar .logo a {
+        color: rgb(255, 255, 255);
     }
-    .navigation .btnLogin-popup {
-        text-align: center;
-        display: block;
-        margin-left: 0px;
+
+    a {
+        text-decoration: none;
+        color: coral;
+        font-size: 1rem;
+        margin: 10px 20px;
+    }
     
+    a:hover {
+        color: rgb(255, 255, 255);
     }
-    form.navigation{
-        width: 130px;
-        margin: 0 auto;
+
+    
+    /* ทำให้เมนูหาย */
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+    /* ทำให้มีแค่ toggle */
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 590px) {
+
+    .shop-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 6rem;
+    }
+
+    .row {
+        padding: 20px 45px 20px;
+    }
+
+    .navbar .logo a {
+        color: rgb(255, 255, 255);
+    }
+    a {
+        text-decoration: none;
+        color: coral;
+        font-size: 1rem;
+        margin: 10px 20px;
+    }
+    
+    a:hover {
+        color: rgb(255, 255, 255);
+    }
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
     }
 }
