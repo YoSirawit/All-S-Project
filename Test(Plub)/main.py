@@ -1,10 +1,13 @@
 from flask import Flask, render_template
+from database import shopname
+
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("Home.html")
+    shopnames = shopname()
+    return render_template("Home.html", Shopnames = shopnames)
 
 @app.route("/login")
 def login():
