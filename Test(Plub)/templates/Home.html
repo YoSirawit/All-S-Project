@@ -17,59 +17,12 @@
     <section class="shop" id="shop">
         <div class="shop-content">
 
+            {% for i in Shopnames %}
             <div class="row">
-                <h3>{{Shopnames[0][0]}}</h3>
-            <a class="button" href="{{ url_for(shoppage(Shopnames)[0][0]) }}">Choose</a>
+                <h3>{{i[0]}}</h3>
+                <a href="../shops/{{i[0]}}">Choose</a>
             </div>
-
-            <div class="row">
-                <h3>shop</h3>
-            <div class="button">
-                <button>Choose</button>
-            </div>
-            </div>
-
-            <div class="row">
-                <h3>shop</h3>
-            <div class="button">
-                <button>Choose</button>
-            </div>
-            </div>
-
-            <div class="row">
-                <h3>shop</h3>
-            <div class="button">
-                <button>Choose</button>
-            </div>
-            </div>
-
-            <div class="row">
-                <h3>shop</h3>
-            <div class="button">
-                <button>Choose</button>
-            </div>
-            </div>
-
-            <div class="row">
-                <h3>shop</h3>
-            <div class="button">
-                <button>Choose</button>
-            </div>
-            </div>
-
-            <div class="row">
-                <h3>shop</h3>
-            <div class="button">
-                <button>Choose</button>
-            </div>
-            </div>
-
-            <div class="row">
-                <h3>shop</h3>
-            <div class="button">
-                <button>Choose</button>
-            </div>
-            </div>
+            {% endfor %}
 
         </div>
     </section>
