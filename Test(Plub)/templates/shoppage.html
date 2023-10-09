@@ -12,6 +12,10 @@
     {% extends "header.html" %}
     {% block header %}
 
+        {% for i in Order %}
+            <h1>{{i[0]}}</h1>
+        {% endfor %}
+
     {% endblock %}
 </body>
 </html>
