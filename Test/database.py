@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, text
 
-db_connection_string = "mysql+pymysql://2v71n11d5258z7xmb138:pscale_pw_yUeNiTZTrvyiWx6hJDz10nMscbLh2Zs4p7Jq4UZDcpn@aws.connect.psdb.cloud/itrestaurant?charset=utf8mb4"
+db_connection_string = ""
 
 engine = create_engine(
     db_connection_string, 
