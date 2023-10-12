@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine, text
 from flask_mysqldb import MySQL
 
-db_connection_string = "mysql+pymysql://35eewomaapidsho4e0nv:pscale_pw_g8UPxEyWfYZtYmmrJjfkH5vtCAmmc4w9hg4oyq2C8WQ@aws.connect.psdb.cloud/itrestaurant?charset=utf8mb4"
+db_connection_string = "ตรงนี้ครับ"
 
 engine = create_engine(
     db_connection_string, 
