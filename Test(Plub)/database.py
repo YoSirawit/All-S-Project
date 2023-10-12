@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine, text
 from flask_mysqldb import MySQL
 
-db_connection_string = "ตรงนี้ครับ"
+db_connection_string = "mysql+pymysql://35eewomaapidsho4e0nv:pscale_pw_g8UPxEyWfYZtYmmrJjfkH5vtCAmmc4w9hg4oyq2C8WQ@aws.connect.psdb.cloud/itrestaurant?charset=utf8mb4"
 
 engine = create_engine(
     db_connection_string, 
@@ -24,3 +24,13 @@ def shopname():
         shopnames = conn.execute(text("select shopname from shoplist"))
 
     return shopnames.all()
+
+def orders(shopnames):
+    with engine.connect() as conn:
+        order = conn.execute(text("SELECT menu FROM orders WHERE shopname = \"{0}\"".format(shopnames)))
+
+    return order.all()
+
+def add_data(user_name, type_user, phone):
+    with engine.connect() as conn:
+        conn.execute(text("INSERT INTO userid(username, typeuser, telephone) VALUES('{0}', {1}, '{2}');".format(user_name, type_user, phone)))

@@ -2,6 +2,7 @@
 
 /* form login */
 .wrapper {
+    margin-top: 6rem;
     position: relative;
     width: 500px;
     height: 540px;
@@ -17,6 +18,7 @@
 }
 
 .wrapper.active {
+    margin-top: 10rem;
     height: 600px;
 }
 .wrapper .form-box {
@@ -164,12 +166,15 @@
 @media (max-width: 590px) {
 
     .wrapper {
-        width: 380px;
-        height: 500px;
+        margin-top: 2rem;
+        width: 350px;
+        height: 440px;
     }
 
     .wrapper.active {
-        height: 600px;
+        margin-top: 12rem;
+        margin-bottom: 2rem;
+        height: 580px;
         width: 340px;
     }
 

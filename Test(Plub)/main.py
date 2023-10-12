@@ -1,8 +1,9 @@
 from flask import Flask, render_template
-from database import shopname
+from database import shopname, orders
 
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def home():
@@ -15,7 +16,8 @@ def login():
 
 @app.route("/shops/<shopnames>")
 def shoppage(shopnames):
-    return render_template("shoppage.html", Shopnames = shopnames)
+    order = orders(shopnames)
+    return render_template("shoppage.html", Shopnames = shopnames, Order = order)
 
 if  __name__ == "__main__":
     app.run(debug=True)
