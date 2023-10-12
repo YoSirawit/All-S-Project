@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     shopnames = shopname()
-    return render_template("Home.html", Shopnames = shopnames)
+    return render_template("home.html", Shopnames = shopnames)
 
 @app.route("/login")
 def login():
