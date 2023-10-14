@@ -27,7 +27,7 @@ def shopname():
 
 def orders(shopnames):
     with engine.connect() as conn:
-        order = conn.execute(text("SELECT menu FROM orders WHERE shopname = \"{0}\"".format(shopnames)))
+        order = conn.execute(text("SELECT menu FROM orders WHERE shopname = \"{0}\" ORDER BY  time_want".format(shopnames)))
 
     return order.all()
 
