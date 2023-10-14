@@ -1,21 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:ital,wght@0,400;1,300&display=swap');
 
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: url(../1316292.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
 .button{
     color: black;
 }
 
 /* home */
+
 .shop-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    gap: 6rem;
     place-items: center;
-    margin-top: 8rem;
+    margin-top: 15rem;
 }
 
 .row {
     position: relative;
-    padding: 30px 55px 35px;
+    padding: 40px 55px 40px;
     background: rgb(34, 34, 34);
     border-radius: 1rem;
     margin: auto;
@@ -55,15 +65,24 @@ button {
 /* end home */
 
 @media (max-width: 800px) {
+    .shop-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        margin-top: 13rem;
+    }
 
+    .row {
+        padding: 30px 55px 35px;
+    }
 }
 
 @media (max-width: 590px) {
 
     .shop-content {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        margin-top: 6rem;
+        gap: 3rem;
+        margin-top: 15rem;
     }
 
     .row {
