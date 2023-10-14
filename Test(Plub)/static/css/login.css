@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:ital,wght@0,400;1,300&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
     display: flex;
     justify-content: center;
@@ -17,173 +10,9 @@ body {
     background-position: center;
 }
 
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    margin: 10px 20px;
-}
-
-a:hover {
-    color: coral;
-}
-
-/* Header */
-
-header.sticky {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    padding: 0 2rem;
-    justify-content: space-between;
-    align-items: center;
-    background: black;
-    padding: 30px 14%;
-    transition: all .50s ease;
-}
-
-.navbar{
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo a {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.navbar .links {
-    display: flex;
-    gap: 2rem;
-}
-
-.navbar .toggle_btn {
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-.action_btn{
-    background-color: rgb(255, 148, 72);
-    color: rgb(255, 255, 255);
-    padding: 1rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
-}
-
-.action_btn:hover {
-    scale: 1.05;
-    color: #ffffff;
-}
-
-.action_btn:active {
-    scale: 0.95;
-}
-
-/* dropdown-menu */
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 77px;
-    height: 0;
-    width: 300px;
-    background: transparent;
-    backdrop-filter: blur(35px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown_menu.open {
-    height: 345px;
-}
-
-.dropdown_menu li {
-    padding: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown_menu .action_btn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-/* end header */
-
-/* home */
-.shop-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-    place-items: center;
-    margin-top: 8rem;
-}
-
-.row {
-    position: relative;
-    padding: 30px 55px 35px;
-    background: rgb(34, 34, 34);
-    border-radius: 1rem;
-    margin: auto;
-    text-align: center;
-    box-shadow: -1px 0 5px 1px rgb(62, 62, 62);
-}
-
-.row h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-}
-
-.button {
-    display: inline-block;
-    border-radius: 0.3rem;
-    background: rgb(0, 0, 0);
-    padding: 3px 10px;
-    transition: all .20s ease;
-}
-
-.button:hover, button:hover {
-    background: coral;
-    color: black;
-    box-shadow: -1px 0 5px 1px rgb(255, 138, 96);
-}
-
-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    color: coral;
-}
-
-/* end home */
-
 /* form login */
 .wrapper {
+    margin-top: 6rem;
     position: relative;
     width: 500px;
     height: 540px;
@@ -199,6 +28,7 @@ button {
 }
 
 .wrapper.active {
+    margin-top: 10rem;
     height: 600px;
 }
 .wrapper .form-box {
@@ -320,52 +150,11 @@ button {
 .login-register p a:hover {
     text-decoration: underline;
 }
-
 /* end form login */
 
 /* Responsive */
 @media (max-width: 800px) {
 
-    .shop-content {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        /* margin-top: 5rem; */
-    }
-
-    .row {
-        padding: 20px 45px 20px;
-    }
-
-    .navbar .logo a {
-        color: rgb(255, 255, 255);
-    }
-
-    a {
-        text-decoration: none;
-        color: coral;
-        font-size: 1rem;
-        margin: 10px 20px;
-    }
-    
-    a:hover {
-        color: rgb(255, 255, 255);
-    }
-
-    
-    /* ทำให้เมนูหาย */
-    .navbar .links,
-    .navbar .action_btn {
-        display: none;
-    }
-    /* ทำให้มีแค่ toggle */
-    .navbar .toggle_btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-    }
-    /* formlogin */
     .wrapper {
         width: 400px;
         height: 540px;
@@ -386,39 +175,15 @@ button {
 
 @media (max-width: 590px) {
 
-    .shop-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        margin-top: 6rem;
-    }
-
-    .row {
-        padding: 20px 45px 20px;
-    }
-
-    .navbar .logo a {
-        color: rgb(255, 255, 255);
-    }
-    a {
-        text-decoration: none;
-        color: coral;
-        font-size: 1rem;
-        margin: 10px 20px;
-    }
-    
-    a:hover {
-        color: rgb(255, 255, 255);
-    }
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
-
     .wrapper {
-        width: 380px;
+        margin-top: 2rem;
+        width: 350px;
         height: 480px;
     }
+
     .wrapper.active {
+        margin-top: 10rem;
+        margin-bottom: 2rem;
         height: 600px;
         width: 340px;
     }

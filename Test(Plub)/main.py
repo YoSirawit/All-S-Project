@@ -8,7 +8,7 @@ USER_LST = load_userid_from_db()
 @app.route("/")
 def home():
     shopnames = shopname()
-    return render_template("Home.html", Shopnames = shopnames)
+    return render_template("home.html", Shopnames = shopnames)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
