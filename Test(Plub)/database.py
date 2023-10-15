@@ -1,7 +1,7 @@
 """ connection with database"""
 from sqlalchemy import create_engine, text
 
-db_connection_string = "mysql+pymysql://0tlrgkfn0wnz2f3m3g75:pscale_pw_Cn4g8I7djlxcVsbFz1I1qOwp9tmNlpdD1dYTldoT0xh@aws.connect.psdb.cloud/itrestaurant?charset=utf8mb4"
+db_connection_string = "mysql+pymysql://xr3q7j85pw2k0q5quld2:pscale_pw_OJxCXn5hRKV9Q2E9xRDaUjtfJgbk4MLG12I0jeGo48b@aws.connect.psdb.cloud/itrestaurant?charset=utf8mb4"
 
 engine = create_engine(
     db_connection_string, 
@@ -26,16 +26,10 @@ def shopname():
 
 def orders(shopnames):
     with engine.connect() as conn:
-        order = conn.execute(text("SELECT menu FROM orders WHERE shopname = \"{0}\" ORDER BY  time_want".format(shopnames)))
+        order = conn.execute(text("SELECT menu FROM orders WHERE shopname = \"{0}\"".format(shopnames)))
 
     return order.all()
 
-def add_data(user_name, type_user, phone, mail, password):
+def add_data(user_name, type_user, phone):
     with engine.connect() as conn:
-        conn.execute(text(f"INSERT INTO userid(username, typeuser, telephone, email, user_pass) VALUES('{user_name}', {type_user}, '{phone}', '{mail}', '{password}');"))
-
-def find_user(email, password):
-    with engine.connect() as conn:
-        user = conn.execute(text(f"SELECT username FROM userid WHERE email = '{email}' AND user_pass = '{password}'"))
-
-    return user.all()
+        conn.execute(text("INSERT INTO userid(username, typeuser, telephone) VALUES('{0}', {1}, '{2}');".format(user_name, type_user, phone)))
