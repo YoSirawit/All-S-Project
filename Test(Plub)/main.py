@@ -13,12 +13,14 @@ def home():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        # register form
         email_regis = request.form.get('email')
         fullname_regis = request.form.get('fullname')
         password_regis = request.form.get('password')
         phone_regis = request.form.get('phone')
         add_data(fullname_regis, 1, phone_regis, email_regis, password_regis)
 
+        # login form
         email_log = request.form.get('email_log')
         pass_log = request.form.get('password_log')
         user = find_user(email_log, pass_log)
