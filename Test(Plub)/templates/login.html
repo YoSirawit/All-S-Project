@@ -17,19 +17,28 @@
     <div class="wrapper">
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="input-box">
                     <span class="icon">
                         <i class='bx bxs-envelope'></i>
                     </span>
-                    <input type="email" for="email"required>
+                    <input 
+                    type="email" 
+                    for="email"
+                    id="email_log"
+                    name="email_log"
+                    required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <i class='bx bxs-lock-alt'></i>
                     </span>
-                    <input type="password" required>
+                    <input 
+                    type="password" 
+                    id="password_log"
+                    name="password_log"
+                    required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
@@ -48,33 +57,49 @@
         {# Start SignUp #}
         <div class="form-box register">
             <h2>Sign up</h2>
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="input-box">
                     <span class="icon">
                         <i class='bx bxs-envelope'></i>
                     </span>
-                    <input type="email" required>
+                    <input
+                     type="email"
+                     id = "email"
+                     name = "email"
+                     required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <i class='bx bxs-user' ></i>
                     </span>
-                    <input type="text" required>
+                    <input 
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    required>
                     <label>Fullname</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <i class='bx bxs-phone'></i>
                     </span>
-                    <input type="telephone" required>
+                    <input 
+                    type="telephone" 
+                    id="phone"
+                    name="phone"
+                    required>
                     <label>Phone</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <i class='bx bxs-lock-alt'></i>
                     </span>
-                    <input type="password" required>
+                    <input 
+                    type="password" 
+                    id="password"
+                    name="password"
+                    required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">

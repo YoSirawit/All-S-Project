@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:ital,wght@0,400;1,300&display=swap');
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../1316292.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
 /* form login */
 .wrapper {
     margin-top: 6rem;
@@ -168,13 +178,13 @@
     .wrapper {
         margin-top: 2rem;
         width: 350px;
-        height: 440px;
+        height: 480px;
     }
 
     .wrapper.active {
-        margin-top: 12rem;
+        margin-top: 10rem;
         margin-bottom: 2rem;
-        height: 580px;
+        height: 600px;
         width: 340px;
     }
 
