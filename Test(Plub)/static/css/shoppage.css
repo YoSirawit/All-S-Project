@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/1316292.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.input-box {
+    margin-top: 100px;
+    height: 700px;
+    width: 550px;
+    background: #fff;
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+.input-text {
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.input-box .menu {
+    justify-content: center;
+}
+
+.logo-food {
+    height: 200px;
+    width: 200px;
+}

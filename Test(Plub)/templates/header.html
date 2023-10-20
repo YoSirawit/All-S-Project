@@ -13,24 +13,24 @@
     <header class="sticky">
         <div class="navbar">
             <div class="logo"><a href="#">IT restaurant</a></div>
-            <ul class="links">
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">My shop</a></li>
-            </ul>
+                <ul class="links">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">My shop</a></li>
+                </ul>
             <a href="{{ url_for('login') }}" class="action_btn">Login</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-                <!-- menu หลังกด toggle -->
-                <div class="dropdown_menu">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="hero">Shop</a></li>
-                    <li><a href="hero">My shop</a></li>
-                    <li><a href="{{ url_for('login')}}" class="action_btn">Login</a></li>
-            </div>
-        </header>
+            <!-- menu หลังกด toggle -->
+        <div class="dropdown_menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="hero">Shop</a></li>
+            <li><a href="hero">My shop</a></li>
+            <li><a href="{{ url_for('login')}}" class="action_btn">Login</a></li>
+        </div>
+    </header>
         <!-- กด toggle แล้วมี dropdown menu -->
         <script>
             const toggleBtn = document.querySelector('.toggle_btn')
@@ -67,8 +67,6 @@
             }
         </script>
 
-        </nav>
-    </header>
     {% block header %}
     {% endblock %}
 </body>

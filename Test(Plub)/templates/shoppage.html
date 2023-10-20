@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{Shopnames}}</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/shoppage.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     {% extends "header.html" %}
     {% block header %}
-
-        {% for i in Order %}
-            <h1>{{i[0]}}</h1>
-        {% endfor %}
-
+    <div class="input-box">
+        <div class="input-text">
+            <h1 class="menu">Your menu</h1>
+            <img class="logo-food" src="{{ url_for('static',filename='images/3570168.png')}}">
+            {% for i in Order %}
+                <h1>{{i[0]}}</h1>
+            {% endfor %}
+        </div>
+    </div>
     {% endblock %}
 </body>
 </html>
