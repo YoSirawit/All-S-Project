@@ -16,12 +16,14 @@
     <!-- ชื่อร้าน -->
     <section class="shop" id="shop">
         <div class="shop-content">
-
+            
             {% for i in Shopnames %}
-            <div class="row">
+            <a href="../shops/{{i[0]}}"><div class="row">
                 <h3>{{i[0]}}</h3>
-                <a href="../shops/{{i[0]}}">Choose</a>
-            </div>
+                <img src="https://www.prachachat.net/wp-content/uploads/2020/03/13-2p1-2.jpg">
+                <br>
+                <p>Details if we want.</p>
+            </div></a>
             {% endfor %}
 
         </div>

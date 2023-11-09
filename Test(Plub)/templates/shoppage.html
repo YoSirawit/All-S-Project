@@ -12,12 +12,25 @@
     {% extends "header.html" %}
     {% block header %}
     <div class="input-box">
-        <div class="input-text">
-            <h1 class="menu">Your menu</h1>
-            <img class="logo-food" src="{{ url_for('static',filename='images/3570168.png')}}">
-            {% for i in Order %}
-                <h1>{{i[0]}}</h1>
-            {% endfor %}
+        <h1 id="menu">Name</h1>
+        <div class="orderbox">
+            <h2 id="order">สั่งอาหาร</h2>
+            <div id="ormenu">
+                <h2>Menu</h2>
+                <input type="text"></input>
+            </div>
+
+            <div id"ortime">
+                <h2>Time</h2>
+                <input type="time"></input>
+            </div>
+
+            <div id"ornote">
+                <h2>Note</h2>
+                <input type="text"></input>
+            </div>
+            <button type="button">submit</button>
+            <button type="button">cancle</button>
         </div>
     </div>
     {% endblock %}

@@ -5,31 +5,50 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(../images/1316292.jpeg);
+    background: url();
     background-size: cover;
     background-position: center;
 }
 
 .input-box {
-    margin-top: 100px;
-    height: 700px;
-    width: 550px;
-    background: #fff;
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background: coral;
     border-radius: 1rem;
-    justify-content: center;
+    margin: auto;
+    text-align: center;
 }
 
-.input-text {
-    padding: 30px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-.input-box .menu {
-    justify-content: center;
+.input-box h1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 60px;
+    color: white;
+    background-color: rgb(62, 62, 62);
+    border-radius: 15px;
 }
 
-.logo-food {
-    height: 200px;
-    width: 200px;
+.orderbox {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background: white;
+    border-radius: 1rem;
+    margin: auto;
+    text-align: center;
 }
+
+.orderbox #order {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.orderbox #ormenu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
