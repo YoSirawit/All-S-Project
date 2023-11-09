@@ -9,14 +9,14 @@ li {
     list-style: none;
 }
 
-a {
+.sticky a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1rem;
     margin: 10px 20px;
 }
 
-a:hover {
+.sticky a:hover {
     color: coral;
 }
 
@@ -77,7 +77,7 @@ header.sticky {
     transition: scale 0.2 ease;
 }
 
-.action_btn:hover {
+.sticky .action_btn:hover {
     scale: 1.05;
     color: #ffffff;
 }
@@ -120,21 +120,21 @@ header.sticky {
 /* end header */
 
 /* Responsive */
-@media (max-width: 800px) {
+@media (max-width: 970px) {
 
     .navbar .logo a {
         color: rgb(255, 255, 255);
     }
 
-    a {
+    .navbar a:hover {
+        color: coral;
+    }
+    
+    .navbar a {
         text-decoration: none;
         color: coral;
         font-size: 1rem;
         margin: 10px 20px;
-    }
-
-    a:hover {
-        color: rgb(255, 255, 255);
     }
 
     /* ทำให้เมนูหาย */
@@ -153,21 +153,21 @@ header.sticky {
     }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 700px) {
 
     .navbar .logo a {
         color: rgb(255, 255, 255);
     }
 
-    a {
+    .navbar a {
         text-decoration: none;
         color: coral;
         font-size: 1rem;
         margin: 10px 20px;
     }
 
-    a:hover {
-        color: rgb(255, 255, 255);
+    .navbar a:hover {
+        color: coral;
     }
     .dropdown_menu {
         left: 2rem;
