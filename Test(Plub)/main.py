@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, session
 from database import shopname, orders, add_data, load_userid_from_db, find_user
 import mysql.connector, MySQLdb.cursors, re
+from werkzeug.security import generate_password_hash, check_password_hash
 
 connection = mysql.connector.connect(host = "*", port = "*",
                                     database = "*",
@@ -28,18 +29,21 @@ def login():
         password_regis = request.form.get('password')
         phone_regis = request.form.get('phone')
         if email_regis and fullname_regis and password_regis and phone_regis:
+            password_regis = generate_password_hash(password_regis, method="sha256")
             add_data(fullname_regis, 1, phone_regis, email_regis, password_regis)
 
         # login form
         email_log = request.form.get('email_log')
         pass_log = request.form.get('password_log')
         #user = find_user(email_log, pass_log)
-        cursor.execute(f'SELECT * FROM userid WHERE email="{email_log}" AND user_pass="{pass_log}"')
-        user = cursor.fetchone()
-        if user:
-            session["loggedin"]=True
-            session['username']=user[1]
-            return redirect(url_for('home'))
+        if email_log:
+            cursor.execute(f'SELECT * FROM userid WHERE email="{email_log}"')
+            user = cursor.fetchone()
+            if user:
+                if check_password_hash(user[5], pass_log):
+                    session["loggedin"]=True
+                    session['username']=user[1]
+                    return redirect(url_for('home'))
     return render_template("login.html")
 
 @app.route("/logout")
