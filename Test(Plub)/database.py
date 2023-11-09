@@ -42,3 +42,12 @@ def find_user(email, password):
     user = conn.execute(text(f"SELECT * FROM userid WHERE email = '{email}' AND user_pass = '{password}'"))
 
     return user.all()
+
+def get_shop_id(shopnames):
+    shop_id = conn.execute(text(f'SELECT * FROM shoplist WHERE shopname = "{shopnames}"'))
+
+    return shop_id.all()
+
+def add_menu(user_name, time_want, menu, shopname):
+    #with engine.connect() as conn:
+    conn.execute(text(f"INSERT INTO orders(username, time_want, menu, shopname) VALUES('{user_name}', '{time_want}', '{menu}', '{shopname}');"))

@@ -17,20 +17,22 @@
             <h2 id="order">สั่งอาหาร</h2>
             <div id="ormenu">
                 <h2>Menu</h2>
-                <input type="text"></input>
+                <form action="#" method="POST">
+                <input type="text" id="menu" name="menu"></input>
             </div>
 
             <div id"ortime">
                 <h2>Time</h2>
-                <input type="time"></input>
+                <input type="time" id="times" name="times"></input>
             </div>
 
             <div id"ornote">
                 <h2>Note</h2>
-                <input type="text"></input>
+                <input type="text" id="note" name="note"></input>
             </div>
-            <button type="button">submit</button>
+            <button type="submit">submit</button>
             <button type="button">cancle</button>
+                </form>
         </div>
     </div>
     {% endblock %}

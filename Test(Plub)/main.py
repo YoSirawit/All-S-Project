@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect, session
-from database import shopname, orders, add_data, load_userid_from_db, find_user
+from database import shopname, orders, add_data, load_userid_from_db, find_user, get_shop_id, add_menu
 import mysql.connector, MySQLdb.cursors, re
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -52,9 +52,16 @@ def logout():
     session.pop('username', None)
     return redirect(url_for("login"))
 
-@app.route("/shops/<shopnames>")
+@app.route("/shops/<shopnames>", methods=['GET', 'POST'])
 def shoppage(shopnames):
     order = orders(shopnames)
+    if request.method == 'POST':
+        user = session['username']
+        menu = request.form.get('menu')
+        time = request.form.get('times')
+        note = request.form.get('note')
+        add_menu(user, time, menu, shopnames)
+        # cursor.execute(f"INSERT INTO orders(username, time_want, menu, shopname) VALUES('{user}', {time}, '{menu}', '{note}')")
     return render_template("shoppage.html", Shopnames = shopnames, Order = order, username= session['username'])
 
 if  __name__ == "__main__":
