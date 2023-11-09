@@ -1,16 +1,25 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect, session
 from database import shopname, orders, add_data, load_userid_from_db, find_user
+import mysql.connector, MySQLdb.cursors, re
 
+connection = mysql.connector.connect(host = "*", port = "*",
+                                    database = "*",
+                                    user = "*",
+                                    password = "*")
+
+cursor = connection.cursor()
 
 app = Flask(__name__)
+app.secret_key = "*"
+
 USER_LST = load_userid_from_db()
 
-@app.route("/")
+@app.route("/home")
 def home():
     shopnames = shopname()
-    return render_template("home.html", Shopnames = shopnames)
+    return render_template("home.html", Shopnames = shopnames, username= session['username'])
 
-@app.route("/login", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         # register form
@@ -18,20 +27,31 @@ def login():
         fullname_regis = request.form.get('fullname')
         password_regis = request.form.get('password')
         phone_regis = request.form.get('phone')
-        add_data(fullname_regis, 1, phone_regis, email_regis, password_regis)
+        if email_regis and fullname_regis and password_regis and phone_regis:
+            add_data(fullname_regis, 1, phone_regis, email_regis, password_regis)
 
         # login form
         email_log = request.form.get('email_log')
         pass_log = request.form.get('password_log')
-        user = find_user(email_log, pass_log)
-        if user != []:
-            return redirect(url_for("home"))
+        #user = find_user(email_log, pass_log)
+        cursor.execute(f'SELECT * FROM userid WHERE email="{email_log}" AND user_pass="{pass_log}"')
+        user = cursor.fetchone()
+        if user:
+            session["loggedin"]=True
+            session['username']=user[1]
+            return redirect(url_for('home'))
     return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.pop('loggedin', None)
+    session.pop('username', None)
+    return redirect(url_for("login"))
 
 @app.route("/shops/<shopnames>")
 def shoppage(shopnames):
     order = orders(shopnames)
-    return render_template("shoppage.html", Shopnames = shopnames, Order = order)
+    return render_template("shoppage.html", Shopnames = shopnames, Order = order, username= session['username'])
 
 if  __name__ == "__main__":
     app.run(debug=True)
