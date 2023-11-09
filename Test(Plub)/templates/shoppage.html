@@ -13,6 +13,18 @@
     {% block header %}
     <div class="input-box">
         <h1 id="menu">Name</h1>
+
+        <!-- allorder -->
+        <div id="allorder">
+            <h2>All Order</h2>
+            <div id='listorder'>
+                {% for i in Order %}
+                    <h3>{{i[0]}}</h3><p>time</p>
+                {% endfor %}
+            </div>
+        </div>
+        <a href="" class="button">สั่งอาหาร</a>
+        <!-- สั่งอาหาร -->
         <div class="orderbox">
             <h2 id="order">สั่งอาหาร</h2>
             <div id="ormenu">
@@ -34,6 +46,7 @@
             <button type="button">cancle</button>
                 </form>
         </div>
+
     </div>
     {% endblock %}
 </body>
