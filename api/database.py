@@ -1,6 +1,5 @@
 """ connection with database"""
 from sqlalchemy import create_engine, text
-from flask_mysqldb import MySQL
 
 db_connection_string = DB_CONNECTION
 

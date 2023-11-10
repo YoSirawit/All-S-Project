@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect, session
-from database import shopname, orders, add_data, load_userid_from_db, find_user, get_shop_id, add_menu, delete_order
-import mysql.connector, MySQLdb.cursors, re
+from database import shopname, orders, add_data, load_userid_from_db, add_menu, delete_order
+import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 
 connection = mysql.connector.connect(host = HOST, port = PORT,
