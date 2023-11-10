@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{help}}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/order_list.css') }}">
+</head>
+<body>
+    {% extends "header.html" %}
+    {% block header %}
+    <div id="allorder">
+        <h2>All Order</h2>
+        <div id='listorder'>
+            <!-- ดึงข้อมูลลิสorderจากdatabaseทำยังไงงง -->
+            <!-- {% for i in Order %}
+                    <h3>{{i[0]}}</h3><p>time</p>
+            {% endfor %} -->
+        </div>
+        <span><button type="refresh" id="refresh">refresh</button>
+        <button type="+" id="plus">+</button></span>
+    </div>
+    {% endblock %}
+</body>
+</html>
