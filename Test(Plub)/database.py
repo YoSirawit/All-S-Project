@@ -54,3 +54,4 @@ def add_menu(user_name, time_want, menu, shopname):
 
 def delete_order(menu_id):
     conn.execute(text(f"DELETE FROM orders WHERE id={menu_id}"))
+ 
