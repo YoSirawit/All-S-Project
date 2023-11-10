@@ -43,6 +43,7 @@ def login():
                 if check_password_hash(user[5], pass_log):
                     session["loggedin"]=True
                     session['username']=user[1]
+                    session['userid']=user[0]
                     return redirect(url_for('home'))
     return render_template("login.html")
 
@@ -50,6 +51,7 @@ def login():
 def logout():
     session.pop('loggedin', None)
     session.pop('username', None)
+    session.pop('userid', None)
     return redirect(url_for("login"))
 
 @app.route("/shops/<shopnames>", methods=['GET', 'POST'])

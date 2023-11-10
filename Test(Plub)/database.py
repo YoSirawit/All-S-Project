@@ -29,7 +29,7 @@ def shopname():
 
 def orders(shopnames):
     #with engine.connect() as conn:
-    order = conn.execute(text("SELECT menu FROM orders WHERE shopname = \"{0}\" ORDER BY  time_want".format(shopnames)))
+    order = conn.execute(text("SELECT * FROM orders WHERE shopname = \"{0}\" ORDER BY time_want".format(shopnames)))
 
     return order.all()
 
@@ -51,3 +51,6 @@ def get_shop_id(shopnames):
 def add_menu(user_name, time_want, menu, shopname):
     #with engine.connect() as conn:
     conn.execute(text(f"INSERT INTO orders(username, time_want, menu, shopname) VALUES('{user_name}', '{time_want}', '{menu}', '{shopname}');"))
+
+def delete_order(menu_id):
+    conn.execute(text(f"DELETE FROM orders WHERE id={menu_id}"))
