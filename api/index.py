@@ -3,10 +3,10 @@ from database import shopname, orders, add_data, load_userid_from_db, find_user,
 import mysql.connector, MySQLdb.cursors, re
 from werkzeug.security import generate_password_hash, check_password_hash
 
-connection = mysql.connector.connect(host = "*", port = "*",
-                                    database = "*",
-                                    user = "*",
-                                    password = "*")
+connection = mysql.connector.connect(host = HOST, port = PORT,
+                                    database = DATABASE,
+                                    user = USERNAME,
+                                    password = PASSWORD)
 
 cursor = connection.cursor()
 
@@ -46,7 +46,7 @@ def login():
                     session['userid']=user[0]
                     session['usertype']=user[2]
                     return redirect(url_for('home'))
-    return render_template("login.html")
+    return render_template("index.html")
 
 @app.route("/logout")
 def logout():
@@ -63,7 +63,6 @@ def shoppage(shopnames):
         user = session['username']
         menu = request.form.get('menu')
         time = request.form.get('times')
-        note = request.form.get('note')
         add_menu(user, time, menu, shopnames)
         # cursor.execute(f"INSERT INTO orders(username, time_want, menu, shopname) VALUES('{user}', {time}, '{menu}', '{note}')")
     return render_template("shoppage.html", Shopnames = shopnames, Order = order, username= session['username'], usertype = session['usertype'])

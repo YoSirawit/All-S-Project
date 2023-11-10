@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine, text
 from flask_mysqldb import MySQL
 
-db_connection_string = "*"
+db_connection_string = DB_CONNECTION
 
 engine = create_engine(
     db_connection_string, 
