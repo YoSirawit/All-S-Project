@@ -64,5 +64,9 @@ def shoppage(shopnames):
         # cursor.execute(f"INSERT INTO orders(username, time_want, menu, shopname) VALUES('{user}', {time}, '{menu}', '{note}')")
     return render_template("shoppage.html", Shopnames = shopnames, Order = order, username= session['username'])
 
+@app.route("/help")
+def help():
+    return render_template("order_list.html")
+
 if  __name__ == "__main__":
     app.run(debug=True)
