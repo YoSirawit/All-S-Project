@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
-    background: url();
+    background-color: #D8D9DA;
     background-size: cover;
     background-position: center;
 }
@@ -20,7 +20,7 @@ body {
     grid-template-columns: repeat(1);
     gap: 8rem;
     place-items: center;
-    margin-top: 15rem;
+    margin-top: 13rem;
 }
 
 .shop-content a {
@@ -30,12 +30,13 @@ body {
 .shop-content a:hover h3{
     color:coral;
 }
+
 .row {
     position: relative;
     width: 750px;
     height: 600px;
-    background: rgb(34, 34, 34);
-    border-radius: 1rem;
+    background: #272829;
+    border-radius: 3rem;
     margin: auto;
     text-align: center;
     box-shadow: -1px 0 5px 1px rgb(62, 62, 62);
@@ -63,33 +64,9 @@ body {
     text-decoration: none;
     color: white;
 }
-
-/* .button {
-    display: inline-block;
-    border-radius: 0.3rem;
-    background: rgb(0, 0, 0);
-    padding: 3px 10px;
-    transition: all .20s ease;
-}
-
-.button:hover, button:hover {
-    background: coral;
-    color: black;
-    box-shadow: -1px 0 5px 1px rgb(255, 138, 96);
-}
-
-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    color: coral;
-} */
-
-
 /* end home */
 
-@media (max-width: 970px) {
+@media (max-width: 880px) {
     .shop-content {
         grid-template-columns: repeat(1);
         gap: 6rem;
@@ -124,22 +101,56 @@ button {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 680px) {
 
     .shop-content {
         grid-template-columns: repeat(1);
         gap: 3rem;
-        margin-top: 15rem;
+        margin-top: 13rem;
     }
 
     .row {
-        width: 380px;
-        height: 500px;
+        width: 450px;
+        height: 450px;
     }
 
     .row img {
-        height: 280px;
-        width: 340px;
+        height: 240px;
+        width: 360px;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+    .row h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 33px;
+        margin-bottom: 5px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .row p {
+        padding-top: 30px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 510px) {
+    .shop-content {
+        grid-template-columns: repeat(1);
+        gap: 3rem;
+        margin-top: 8rem;
+    }
+
+    .row {
+        width: 330px;
+        height: 430px;
+    }
+
+    .row img {
+        width: 280px;
+        height: 220px;
         border: 2px solid white;
         border-radius: 20px;
     }

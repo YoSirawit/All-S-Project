@@ -5,8 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
-    /* background: url(); */
+    /* background-color: #D8D9DA; */
+    background: url(https://img.freepik.com/free-vector/restaurant-symbols-seamless-pattern-doodle-sketch_1284-12804.jpg?w=826&t=st=1699599143~exp=1699599743~hmac=f9bc9d3dea21d642173dc7d9c396767ea7f6f09c1b7d30f6891c32a1729456f2);
     background-size: cover;
     background-position: center;
 }

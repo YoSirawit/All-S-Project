@@ -12,7 +12,7 @@ li {
 .sticky a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 10px 20px;
 }
 
@@ -32,7 +32,7 @@ header.sticky {
     padding: 0 2rem;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background:#272829;
     padding: 30px 14%;
     transition: all .50s ease;
 }
@@ -50,11 +50,13 @@ header.sticky {
 .navbar .logo a {
     font-size: 2rem;
     font-weight: bold;
+    cursor: none;
 }
 
 .navbar .links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    align-items: center;
 }
 
 .navbar .toggle_btn {
@@ -95,14 +97,15 @@ header.sticky {
     height: 0;
     width: 300px;
     background: transparent;
-    backdrop-filter: blur(35px);
-    border-radius: 10px;
+    backdrop-filter: blur(103px);
+    border-radius: 14px;
     overflow: hidden;
     transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open {
-    height: 345px;
+    height: 261px;
+    margin-top: 1.4rem;
 }
 
 .dropdown_menu li {
@@ -120,7 +123,7 @@ header.sticky {
 /* end header */
 
 /* Responsive */
-@media (max-width: 970px) {
+@media (max-width: 1020px) {
 
     .navbar .logo a {
         color: rgb(255, 255, 255);
@@ -172,5 +175,11 @@ header.sticky {
     .dropdown_menu {
         left: 2rem;
         width: unset;
+    }
+}
+
+@media (max-width: 510px) {
+    header.sticky {
+        padding: 10px 10%;
     }
 }
