@@ -4,3 +4,4 @@ mysql-connector-python
 Flask-SQLAlchemy
 mysql
 werkzeug
+python-dotenv
