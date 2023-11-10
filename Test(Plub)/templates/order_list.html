@@ -14,7 +14,7 @@
         <div id='listorder'>
             <!-- ดึงข้อมูลลิสorderจากdatabaseทำยังไงงง -->
             {% for i in Order %}
-                <h3>{{i[3]}}</h3><p>time {{i[2]}}</p>
+                <h3>{{i[3]}}</h3><p>time {{i[2]}}</p><a href="{{ url_for('delete_menu', menu_id=i[0]) }}">Delete</a>
             {% endfor %}
         </div>
         <span><button type="refresh" id="refresh">refresh</button>
