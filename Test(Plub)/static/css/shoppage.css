@@ -29,7 +29,8 @@ body {
     border-radius: 2rem;
 }
 
-.orderbox {
+#orderbox {
+    display: none;
     position: absolute;
     width: 350px;
     height: 400px;
@@ -39,7 +40,7 @@ body {
     text-align: center;
 }
 
-.orderbox #order {
+#orderbox #order {
     background-color: rgb(62, 62, 62);
     color: white;
     padding-top: 10px;
@@ -47,7 +48,7 @@ body {
     border-radius: 10px;
 }
 
-.orderbox #ormenu {
+#orderbox #ormenu {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -59,10 +60,6 @@ body {
     overflow: hidden;
     width: 500px;
     height: 560px;
-}
-
-.orderbox {
-    display: none;
 }
 
 /* All order */
@@ -103,7 +100,20 @@ body {
     background-color: rgb(62, 62, 62);
 }
 
-.input-box a:hover {
+.input-box #button:hover {
+    background-color: white;
+    color: coral;
+}
+.input-box #button2 {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 99999px;
+    background-color: rgb(62, 62, 62);
+}
+
+.input-box #button2:hover {
     background-color: white;
     color: coral;
 }
@@ -124,7 +134,7 @@ body {
         height: 450px;
         margin-left: 0px;
     }
-    .input-box .orderbox {
+    .input-box #orderbox {
         margin-left: 0px;
         width: 250px;
         height: 450px;
@@ -147,7 +157,7 @@ body {
         height: 450px;
         margin-left: 0px;
     }
-    .input-box .orderbox {
+    .input-box #orderbox {
         margin-left: 0px;
         width: 250px;
         height: 450px;
