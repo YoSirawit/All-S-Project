@@ -2,11 +2,15 @@ from flask import Flask, render_template, request, url_for, redirect, session
 from database import shopname, orders, add_data, load_userid_from_db, add_menu, delete_order
 import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
+from dotenv import load_dotenv
+import os
 
-connection = mysql.connector.connect(host = HOST, port = PORT,
-                                    database = DATABASE,
-                                    user = USERNAME,
-                                    password = PASSWORD)
+load_dotenv()
+
+connection = mysql.connector.connect(host = os.getenv('HOST'), port = os.getenv('PORT'),
+                                    database = os.getenv('DATABASE'),
+                                    user = "gvtpx2l5ogq6jvi7s2hd",
+                                    password = os.getenv('PASSWORD'))
 
 cursor = connection.cursor()
 

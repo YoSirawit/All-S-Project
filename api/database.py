@@ -1,7 +1,11 @@
 """ connection with database"""
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+import os
 
-db_connection_string = DB_CONNECTION
+load_dotenv()
+
+db_connection_string = os.getenv('DB_CONNECTION')
 
 engine = create_engine(
     db_connection_string, 
