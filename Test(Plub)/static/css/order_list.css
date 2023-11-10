@@ -9,12 +9,13 @@
     position: relative;
     width: 450px;
     height: 530px;
-    background: lightblue;
+    background: rgb(0, 0, 0);
     border-radius: 1rem;
     margin: auto;
     margin-top: 9rem;
     text-align: center;
     margin-bottom: 20px;
+    color: white;
 }
 
 #allorder h2 {
@@ -25,6 +26,7 @@
 }
 
 #allorder #listorder {
+    gap: 1rem;
     text-align: left;
     padding-top: 20px;
     padding-left: 20px;
@@ -32,7 +34,7 @@
     grid-template-rows: auto;
 }
 
-button#refresh {
+/* button#refresh {
     margin-top: 24rem;
     margin-left: 18rem;
     color: white;
@@ -52,7 +54,7 @@ button#plus  {
     border: 2px solid white;
     border-radius: 99999px;
     background-color: rgb(62, 62, 62);
-}
+} */
 
 
 
