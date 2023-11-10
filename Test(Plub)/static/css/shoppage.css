@@ -17,13 +17,12 @@ body {
     height: 700px;
     background: rgb(255, 148, 72);
     border-radius: 3rem;
-    margin-top: 30px;
+    margin-top: 5rem;
     text-align: center;
 }
 
 .input-box h1{
     padding-top: 15px;
-    padding-bottom: 15px;
     margin-bottom: 20px;
     color: white;
     background-color: rgb(62, 62, 62);
@@ -31,7 +30,7 @@ body {
 }
 
 .orderbox {
-    position: relative;
+    position: absolute;
     width: 350px;
     height: 400px;
     background: white;
@@ -53,6 +52,15 @@ body {
     padding-bottom: 20px;
 }
 
+.allinone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 500px;
+    height: 560px;
+}
+
 .orderbox {
     display: none;
 }
@@ -60,7 +68,7 @@ body {
 /* All order */
 
 .input-box #allorder {
-    position: relative;
+    position: absolute;
     width: 350px;
     height: 530px;
     background: white;
@@ -86,7 +94,7 @@ body {
     grid-template-rows: auto;
 }
 
-.input-box .button {
+.input-box #button {
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -100,9 +108,48 @@ body {
     color: coral;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 510px) {
     .input-box {
-        width: 400px;
-        height: 700px;
+        width: 300px;
+        height: 600px;
+    }
+    .allinone {
+        margin-left: 0px;
+        width: 300px;
+        height: 450px;
+        margin-bottom: 20px;
+    }
+    .input-box #allorder {
+        width: 250px;
+        height: 450px;
+        margin-left: 0px;
+    }
+    .input-box .orderbox {
+        margin-left: 0px;
+        width: 250px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 510px) {
+    .input-box {
+        width: 300px;
+        height: 600px;
+    }
+    .allinone {
+        margin-left: 0px;
+        width: 300px;
+        height: 450px;
+        margin-bottom: 20px;
+    }
+    .input-box #allorder {
+        width: 250px;
+        height: 450px;
+        margin-left: 0px;
+    }
+    .input-box .orderbox {
+        margin-left: 0px;
+        width: 250px;
+        height: 450px;
     }
 }

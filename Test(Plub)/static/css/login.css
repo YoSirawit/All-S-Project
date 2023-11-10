@@ -35,7 +35,7 @@ body {
 }
 .wrapper .form-box {
     width: 100%;
-    padding: 30px;
+    padding: 20px;
 }
 
 .wrapper .form-box.login {
@@ -57,6 +57,10 @@ body {
 .wrapper.active .form-box.register {
     transition: transform .18s ease;
     transform: translateX(0);
+}
+
+.form-box.register form {
+    padding: 20px;
 }
 
 .form-box h2 {
@@ -158,20 +162,24 @@ body {
 @media (max-width: 800px) {
 
     .wrapper {
-        width: 400px;
+        width: 500px;
         height: 540px;
     }
     .wrapper.active {
         height: 600px;
+        padding: 20px;
     }
 
     .wrapper .form-box {
         width: 100%;
-        padding: 30px;
     }
 
     .form-box h2 {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+    .form-box.register form {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -191,7 +199,6 @@ body {
     }
 
     .wrapper .form-box {
-        width: 80%;
-        padding: 0%;
+        padding: 20px;
     }
 }
