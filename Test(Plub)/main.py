@@ -3,10 +3,10 @@ from database import shopname, orders, add_data, load_userid_from_db, find_user,
 import mysql.connector, MySQLdb.cursors, re
 from werkzeug.security import generate_password_hash, check_password_hash
 
-connection = mysql.connector.connect(host = "HOST", port = "PORT",
-                                    database = "DATABASE",
-                                    user = "USERNAME",
-                                    password = "PASSWORD")
+connection = mysql.connector.connect(host = HOST, port = PORT,
+                                    database = DATABASE,
+                                    user = USERNAME,
+                                    password = PASSWORD)
 
 cursor = connection.cursor()
 
