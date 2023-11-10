@@ -68,7 +68,11 @@ def shoppage(shopnames):
 
 @app.route("/help")
 def help():
-    return render_template("order_list.html")
+    shopowner = session['userid']
+    cursor.execute(f"SELECT shopname FROM shoplist WHERE shopownerid = {shopowner}")
+    shopname = cursor.fetchone()
+    order = orders(shopname[0])
+    return render_template("order_list.html", Order = order, userid = session['userid'])
 
 if  __name__ == "__main__":
     app.run(debug=True)
