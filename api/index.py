@@ -46,7 +46,7 @@ def login():
                     session['userid']=user[0]
                     session['usertype']=user[2]
                     return redirect(url_for('home'))
-    return render_template("index.html")
+    return render_template("login.html")
 
 @app.route("/logout")
 def logout():
