@@ -7,19 +7,6 @@
     <title>Login</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script>
-        const wrapper = document.querySelector('.wrapper');
-        const loginLink = document.querySelector('.login-link');
-        const registerLink = document.querySelector('.register-link');
-
-        registerLink.addEventListener('click', ()=> {
-            wrapper.classList.add('active');
-        });
-
-        loginLink.addEventListener('click', ()=> {
-            wrapper.classList.remove('active');
-        });
-    </script>
 </head>
 
 <body>
@@ -128,8 +115,16 @@
     {# End SignUp #}
 
     {# Start Javascipt #}
-<script src="{{ url_for('static', filename='javascipt/login.js')}}"></script>
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+        const loginLink = document.querySelector('.login-link');
+        const registerLink = document.querySelector('.register-link');
+
+        registerLink.addEventListener('click', ()=> { wrapper.classList.add('active'); });
+
+        loginLink.addEventListener('click', ()=> { wrapper.classList.remove('active'); });
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     {# End Javascipt #}
 
     {% endblock %}
