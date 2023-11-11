@@ -62,7 +62,8 @@ def shoppage(shopnames):
         user = session['username']
         menu = request.form.get('menu')
         time = request.form.get('times')
-        add_menu(user, time, menu, shopnames)
+        if user and menu and time:
+            add_menu(user, time, menu, shopnames)
         # cursor.execute(f"INSERT INTO orders(username, time_want, menu, shopname) VALUES('{user}', {time}, '{menu}', '{note}')")
     return render_template("shoppage.html", Shopnames = shopnames, Order = order, username= session['username'], usertype = session['usertype'])
 
