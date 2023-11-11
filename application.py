@@ -4,12 +4,12 @@ import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
-# connection = mysql.connector.connect(host = os.getenv('HOST'), port = os.getenv('PORT'),
-#                                     database = os.getenv('DATABASE'),
-#                                     user = "gvtpx2l5ogq6jvi7s2hd",
-#                                     password = os.getenv('PASSWORD'))
+connection = mysql.connector.connect(host = os.getenv('HOST'), port = os.getenv('PORT'),
+                                    database = os.getenv('DATABASE'),
+                                    user = "gvtpx2l5ogq6jvi7s2hd",
+                                    password = os.getenv('PASSWORD'))
 
-# cursor = connection.cursor()
+cursor = connection.cursor()
 
 app = Flask(__name__)
 app.secret_key = "*"
