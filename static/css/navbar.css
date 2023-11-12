@@ -32,7 +32,7 @@ header.sticky {
     padding: 0 2rem;
     justify-content: space-between;
     align-items: center;
-    background:#272829;
+    background: transparent;
     padding: 30px 14%;
     transition: all .50s ease;
 }
@@ -67,10 +67,10 @@ header.sticky {
 }
 
 .action_btn{
-    background-color: rgb(255, 148, 72);
+    background-color: transparent;
     color: rgb(255, 255, 255);
     padding: 1rem 1rem;
-    border: none;
+    border: 2px solid white;
     outline: none;
     border-radius: 20px;
     font-size: 1rem;
@@ -81,7 +81,8 @@ header.sticky {
 
 .sticky .action_btn:hover {
     scale: 1.05;
-    color: #ffffff;
+    color: coral;
+    border: 3px solid coral;
 }
 
 .action_btn:active {

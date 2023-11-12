@@ -10,29 +10,44 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    /* background: url(); */
-    background-color: #D8D9DA;
-    background-size: cover;
+    height: auto;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
     background-position: center;
+    animation: gradient 15s ease infinite;
 }
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 .input-box {
     position: relative;
     width: 500px;
-    height: 700px;
-    background: rgb(255, 148, 72);
-    border-radius: 3rem;
-    margin-top: 17rem;
+    height: 720px;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: -1px 0 5px 1px grey;
+    border-radius: 2rem;
+    margin-top: 12rem;
     text-align: center;
 }
 
 .input-box h1{
     padding-top: 15px;
+    padding-bottom: 5px;
     margin-bottom: 20px;
     color: white;
-    background-color: rgb(62, 62, 62);
     border-radius: 2rem;
+    box-shadow: -1px 0 5px 1px white;
 }
 
 #orderbox {
@@ -47,16 +62,55 @@ body {
 }
 
 #orderbox #order {
-    background-color: rgb(62, 62, 62);
-    color: white;
+    background-color: transparent;
+    color: #e73c7e;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 2rem;
+    border: 2px solid #e73c7e;
 }
 
 #orderbox #ormenu {
+    color: #23d5ab;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+#orderbox #ormenu input {
+    border: 1.5px solid #23d5ab;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#orderbox #ortime {
+    color:#23d5ab;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#orderbox #ortime input {
+    border: 1.5px solid #23d5ab;
+    border-radius: 1rem;
+    text-align: center;
+    padding-left: 10px;
+}
+
+#orderbox button {
+    border: orange 2px solid;
+    border-radius: 1rem;
+    padding: 3px;
+    background-color: transparent;
+    color: orange;
+}
+
+#orderbox button:hover {
+    border: orange 3px solid;
+    border-radius: 1rem;
+    padding: 4px;
+    background-color: transparent;
+    color: orange;
+    transition: 1.0ms;
+    font-size: 13px;
 }
 
 .allinone {
@@ -80,14 +134,15 @@ body {
     text-align: center;
     margin-bottom: 20px;
     overflow: auto;
+    box-shadow: -1px 0 5px 1px #e73c7e;
 }
 
 #allorder h2 {
-    background-color: rgb(62, 62, 62);
-    color: white;
+    color: #e73c7e;
+    border: 2px solid #e73c7e;
+    border-radius: 2rem;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 2rem;
 }
 
 #allorder #listorder {
@@ -103,12 +158,16 @@ body {
     padding: 10px;
     text-decoration: none;
     border: 2px solid white;
+    box-shadow: -1px 0 5px 1px white;
     border-radius: 99999px;
-    background-color: rgb(62, 62, 62);
+    background-color: transparent;
+    font-weight: bold;
 }
 
 .input-box #button:hover {
     background-color: white;
+    padding: 12px;
+    border: 3px solid white;
     color: coral;
 }
 .input-box #button2 {
@@ -116,42 +175,23 @@ body {
     padding: 10px;
     text-decoration: none;
     border: 2px solid white;
+    box-shadow: -1px 0 5px 1px white;
     border-radius: 99999px;
-    background-color: rgb(62, 62, 62);
+    background-color: transparent;
 }
 
 .input-box #button2:hover {
     background-color: white;
+    padding: 12px;
+    border: 3px solid white;
     color: coral;
 }
 
 @media (max-width: 510px) {
     .input-box {
+        margin-top: 7rem;
         width: 300px;
-        height: 600px;
-    }
-    .allinone {
-        margin-left: 0px;
-        width: 300px;
-        height: 450px;
-        margin-bottom: 20px;
-    }
-    .input-box #allorder {
-        width: 250px;
-        height: 450px;
-        margin-left: 0px;
-    }
-    .input-box #orderbox {
-        margin-left: 0px;
-        width: 250px;
-        height: 450px;
-    }
-}
-
-@media (max-width: 510px) {
-    .input-box {
-        width: 300px;
-        height: 600px;
+        height: 620px;
     }
     .allinone {
         margin-left: 0px;

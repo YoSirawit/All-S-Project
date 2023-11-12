@@ -5,25 +5,50 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    background-position: center;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
 #allorder {
     overflow: auto;
     position: relative;
-    width: 450px;
-    height: 530px;
-    background: rgba(255, 158, 89, 0.923);
-    border-radius: 1rem;
+    width: 500px;
+    height: 620px;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: -1px 0 5px 1px grey;
+    border-radius: 2rem;
     margin: auto;
-    margin-top: 9rem;
+    margin-top: 12rem;
     text-align: center;
-    margin-bottom: 20px;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
-#allorder h2 {
-    color: rgb(0, 0, 0);
+#allorder h1 {
+    color: white;
     padding-top: 20px;
     padding-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 2rem;
+    box-shadow: -1px 0 5px 1px white;
 }
 
 #allorder #listorder {
@@ -33,6 +58,10 @@
     padding-left: 20px;
     display: grid;
     grid-template-rows: auto;
+}
+
+#allorder #listorder hr {
+    border: 1px solid white;
 }
 
 /* button#refresh {
@@ -62,12 +91,15 @@ button#plus  {
 
 @media (max-width: 400px) {
     #allorder {
-        width: 350px;
+        margin-top: 7rem;
+        width: 280px;
+        height: 450px;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     #allorder {
+        margin-top: 7rem;
         width: 380px;
     }
 }

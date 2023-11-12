@@ -9,11 +9,24 @@
 body {
     display: flex;
     justify-content: center;
-    height: 100vh;
-    background-color: #D8D9DA;
-    background-size: cover;
+    height: auto;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
     background-position: center;
+    animation: gradient 15s ease infinite;
 }
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 .button{
     color: black;
@@ -41,11 +54,12 @@ body {
     position: relative;
     width: 750px;
     height: 600px;
-    background: #272829;
+    background: transparent;
+    border: 2px solid white;
     border-radius: 3rem;
     margin: auto;
     text-align: center;
-    box-shadow: -1px 0 5px 1px rgb(62, 62, 62);
+    box-shadow: -1px 0 5px 1px white;
 }
 
 .row img {
@@ -53,6 +67,7 @@ body {
     width: 600px;
     border: 2px solid white;
     border-radius: 20px;
+    box-shadow: -1px 0 5px 1px white;
 }
 .row h3 {
     padding-top: 30px;
