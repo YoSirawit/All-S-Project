@@ -26,7 +26,7 @@ def load_userid_from_db():
 
 def shopname():
     #with engine.connect() as conn:
-    shopnames = conn.execute(text("select shopname from shoplist"))
+    shopnames = conn.execute(text("select * from shoplist"))
 
     return shopnames.all()
 
@@ -57,4 +57,3 @@ def add_menu(user_name, time_want, menu, shopname):
 
 def delete_order(menu_id):
     conn.execute(text(f"DELETE FROM orders WHERE id={menu_id}"))
- 
