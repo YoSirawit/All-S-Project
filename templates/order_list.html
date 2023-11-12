@@ -15,7 +15,7 @@
             <!-- ดึงข้อมูลลิสorderจากdatabaseทำยังไงงง -->
             {% for i in Order %}
                 <h3>{{i[3]}}</h3><p>time {{i[2]}}</p><a href="{{ url_for('delete_menu', menu_id=i[0]) }}">
-                    <i class="fa-regular fa-circle-check" style="color: #3eb314;"></i></a>
+                    <i class="fa-regular fa-circle-check fa-flip" style="color: rgb(81, 222, 30);"></i></a>
                 <hr width=95% size=2 color=black>
             {% endfor %}
         </div>

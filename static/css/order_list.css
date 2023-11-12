@@ -45,10 +45,12 @@ body {
 
 #allorder h1 {
     color: white;
-    padding-top: 20px;
+    padding-top: 13px;
     padding-bottom: 10px;
     border-radius: 2rem;
     box-shadow: -1px 0 5px 1px white;
+    font-size: large;
+    font-weight: bold;
 }
 
 #allorder #listorder {
@@ -87,19 +89,10 @@ button#plus  {
 } */
 
 
-
-
-@media (max-width: 400px) {
-    #allorder {
-        margin-top: 7rem;
-        width: 280px;
-        height: 450px;
-    }
-}
-
 @media (max-width: 600px) {
     #allorder {
         margin-top: 7rem;
-        width: 380px;
+        width: 340px;
+        height: 520px;
     }
 }
